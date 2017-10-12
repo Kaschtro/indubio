@@ -1,2 +1,16 @@
-<h1> Neuer Benutzer </h1>
-<p> Blablablub </p>
+<h1> Anmelden </h1>
+ <%= form_for(@user) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit "Create my account" %>
+<% end %>
